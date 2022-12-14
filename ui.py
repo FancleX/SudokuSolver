@@ -11,7 +11,6 @@ class MainWindow(QMainWindow):
     
     def __init__(self):
         super(MainWindow, self).__init__()
-        self.solver = solution.AlgorithmX()
 
         self.resize(300, 300)
         self.setWindowTitle('Sudoku Game Solver')
@@ -33,7 +32,8 @@ class MainWindow(QMainWindow):
         if file_name[0]:
             sudoku_board = self.parse_file(file_name[0])
             original_board = copy.deepcopy(sudoku_board)
-            self.solver.solveSudoku(sudoku_board)
+            solver = solution.AlgorithmX()
+            solver.solveSudoku(sudoku_board)
             self.open_dialog(original_board, sudoku_board)
         else:
             print('Can not open the file, the file should be CSV only')
