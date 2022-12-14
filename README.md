@@ -1,5 +1,5 @@
 ## CS5800 Final Project Knuth's Algorithm X
-Implement Knuth's Algorithm X to solve Sudoku as an exact cover problem and visualize the output by PyQt5.
+Implement Knuth's Algorithm X to solve Hyper Sudoku as an exact cover problem and visualize the output by PyQt5.
 
 
 ### Input
