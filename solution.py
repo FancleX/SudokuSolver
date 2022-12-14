@@ -86,10 +86,10 @@ class AlgorithmX:
 
             rv_pairs_to_remove = set()
 
-            for r in values_to_resource_mapping[val]:
-                for v2 in resource_to_values_mapping[r]:
-                    for r2 in values_to_resource_mapping[v2]:
-                        rv_pairs_to_remove.add((r2, v2))
+            for vr in values_to_resource_mapping[val]:
+                for rv in resource_to_values_mapping[vr]:
+                    for vtr in values_to_resource_mapping[rv]:
+                        rv_pairs_to_remove.add((vtr, rv))
 
             for r, v in rv_pairs_to_remove:
                 resource_to_values_mapping[r].remove(v)
